@@ -1,9 +1,10 @@
 p{
     margin: 10px 0 !important;
     font-weight: bolder;
+    color: white;
 }
 .h3{
-    color: rgb(181, 3, 3);
+    color: rgb(59, 125, 5);
 }
 
 .login-container{
@@ -36,4 +37,7 @@ p{
 }
 .fa-plus{
     color: green;
+}
+.navbar{
+    background-color: rgba(180, 255, 59, 0.97);
 }
