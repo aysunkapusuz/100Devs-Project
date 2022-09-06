@@ -1,9 +1,10 @@
 
-<h3>Welcome {{name}}! I hope you feel well today!</h3>
-<p>Here are your medicine usage history</p>
+<h3>Welcome {{name}}! I hope you feel well today!</h3> <br>
+
+<h5>Here are your medicine usage history</h5> <br>
 
 {{#if stories}}
-       <table class="striped">
+       <table class="highlight">
         <thead>
             <tr>
                 <th>Name of Medicine</th>
@@ -21,7 +22,7 @@
                     <td>{{formatDate createdAt 'MMMM Do YYYY'}}</td>
                     <td><span class="dash-status">{{status}}</span></td>
                     <td>
-                        <a href="/stories/edit/{{_id}}" class="btn btn-float">
+                        <a href="/stories/edit/{{_id}}" class="btn btn-green btn-float">
                             <i class="fas fa-edit"></i>
                         </a>
 
