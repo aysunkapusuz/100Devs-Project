@@ -49,5 +49,12 @@ p{
     color: rgb(252, 136, 136);
     border-radius: 50%;
     flex: auto;
- 
+}
+.save{
+    border-radius: 50%;
+    color: rgb(5, 233, 5);
+}
+.orange{
+    border-radius: 50%;
+    color: orangered;
 }
