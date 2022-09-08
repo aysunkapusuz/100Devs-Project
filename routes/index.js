@@ -37,4 +37,8 @@ router.get('/chewgum',  (req,res)=>{
     res.render('chewgum')
 })
 
+router.get('/drinkwater',  (req,res)=>{
+    res.render('drinkwater')
+})
+
 module.exports = router
