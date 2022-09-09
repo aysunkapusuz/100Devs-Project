@@ -1,1 +1,56 @@
-<h3>helllo</h3>
+ <style>
+
+#cup {
+  width: 240px;
+  height: 350px;
+  border: 10px solid #0d161f;
+  margin-top: 300px;
+  float: right;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 0px 0px 50px 50px;
+  box-shadow: 0px 0px 0px 8px #fff,
+              inset 20px -20px 20px rgba(255,255,255,0.5),
+              inset -10px -20px 20px rgba(255,255,255,0.5);
+  background-image: url(https://drive.google.com/uc?export=view&id=1668Sj2XfrJGTWDFc3IRqCBPsqTnW2tSE);
+  background-position: 0px 350px;
+  background-repeat: repeat-x;
+  animation: filling 20s ease-in-out infinite;
+
+}
+
+#cup::after {
+  content: "";
+  width: 70px;
+  height: 140px;
+  position: absolute;
+  left: 221px;
+  top: 50px;
+  border: 8px solid black;
+  border-right-width: 16px;
+  border-radius: 0px 20px 50px 0px;
+}
+
+
+h2 {
+  color: rgba(89, 234, 63, 0.656);
+  position: absolute;
+  font-family: fantasy;
+  font-size: 40px;
+  text-align: center;
+  bottom: 1px;
+}
+
+
+@keyframes filling {
+  50% {background-position: 3000px 0px;}
+  100% {background-position: 6000px 350px;}
+}
+
+</style>
+
+
+<div id="cup">
+      <h2>drink some water</h2>
+</div>
