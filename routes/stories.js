@@ -27,7 +27,7 @@ router.post('/', ensureAuth, async (req,res) => {
 //@Route GET /stories
 router.get('/', ensureAuth, async (req,res) => {
     try {
-        const stories = await Story.find({status: 'shared'})
+      const stories = await Story.find({status: 'shared'})
             .populate('user')
             .sort({createdAt: 'desc'})
             .lean()
