@@ -82,3 +82,257 @@ p{
     text-align: center;
     margin-top: 3rem;
 }
+
+
+
+
+
+
+
+/* route chewgum style */
+
+body {
+    box-sizing: border-box;
+    background: rgb(241, 246, 236) 
+}
+h3{
+  color: rgba(156, 242, 18, 0.97);
+  margin-top: 50px;
+}
+.timer {
+font-family: sans-serif;
+padding: 24px 32px;
+background: rgba(183, 241, 175, 0.1);
+display: flex;
+justify-content: center;
+margin-top: 150px;
+border-radius: 30px;
+color: rgb(64, 83, 5)
+}
+
+.timer__part {
+font-size: 36px;
+font-weight: bold;
+}
+
+.timer__btn {
+width: 50px;
+height: 50px;
+margin-left: 16px;
+border-radius: 50%;
+border: none;
+color: white;
+background: orange;
+cursor: pointer;
+z-index: 1;
+}
+
+.timer__btn--start {
+background: #00b84c;
+z-index: 1;
+}
+
+.timer__btn--stop {
+background: #ff0256;
+z-index: 1;
+}
+h3{
+text-align: center;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+*{
+margin: 0px;
+padding: 0px;
+}
+
+
+.area{
+background: rgb(229, 194, 128);  
+background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+width: 100%;
+height:100%;
+
+}
+
+.circles{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+overflow: hidden;
+}
+
+.circles li{
+position: absolute;
+display: block;
+list-style: none;
+width: 20px;
+height: 20px;
+background: rgba(184, 248, 81, 0.97);
+animation: animate 25s linear infinite;
+bottom: -150px;
+
+}
+
+.circles li:nth-child(1){
+left: 25%;
+width: 80px;
+height: 80px;
+animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+left: 10%;
+width: 20px;
+height: 20px;
+animation-delay: 2s;
+animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+left: 70%;
+width: 20px;
+height: 20px;
+animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+left: 40%;
+width: 60px;
+height: 60px;
+animation-delay: 0s;
+animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+left: 65%;
+width: 20px;
+height: 20px;
+animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+left: 75%;
+width: 110px;
+height: 110px;
+animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+left: 35%;
+width: 150px;
+height: 150px;
+animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+left: 50%;
+width: 25px;
+height: 25px;
+animation-delay: 15s;
+animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+left: 20%;
+width: 15px;
+height: 15px;
+animation-delay: 2s;
+animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+left: 85%;
+width: 150px;
+height: 150px;
+animation-delay: 0s;
+animation-duration: 11s;
+}
+
+@keyframes animate {
+
+0%{
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+}
+
+100%{
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+}
+}
+
+
+/* drink water routes */
+
+
+#cup {
+    width: 200px;
+    height: 350px;
+    border: 10px solid #0d161f;
+    margin-top: 200px;
+    float: right;
+    transform: translate(-50%,-50%);
+    border-radius: 0px 0px 50px 50px;
+    box-shadow: 0px 0px 0px 8px #fff,
+                inset 20px -20px 20px rgba(255,255,255,0.5),
+                inset -10px -20px 20px rgba(255,255,255,0.5);
+    background-image: url(https://drive.google.com/uc?export=view&id=1668Sj2XfrJGTWDFc3IRqCBPsqTnW2tSE);
+    background-position: 0px 350px;
+    background-repeat: repeat-x;
+    animation: filling 20s ease-in-out infinite;
+  
+  }
+  
+  #cup::after {
+    content: "";
+    width: 60px;
+    height: 140px;
+    position: absolute;
+    left: 180px;
+    top: 50px;
+    border: 8px solid black;
+    border-right-width: 16px;
+    border-radius: 0px 20px 50px 0px;
+  }
+  
+  
+  h2 {
+    color: rgba(149, 248, 131, 0.656);
+    position: absolute;
+    font-family: fantasy;
+    font-size: 40px;
+    text-align: center;
+    bottom: 1px;
+  }
+  
+  
+  @keyframes filling {
+    50% {background-position: 3000px 0px;}
+    100% {background-position: 6000px 350px;}
+  }
+  .main{
+    box-sizing: border-box;
+  }
+  
+  h1 {
+      color: rgb(64, 83, 5);
+      text-align: center;
+      }
+  div.gfg {
+      background-color: rgb(233, 245, 221);
+      width: 500px;
+      height: 250px;
+      overflow: auto;
+      text-align:justify;
+      float: left;
+      margin-top: 120px;
+      margin-left: 100px;
+      padding: 20px;
+  }
