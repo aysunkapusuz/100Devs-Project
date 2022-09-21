@@ -61,15 +61,13 @@ p{
 }
 .save{
     border-radius: 50%;
-    color: rgb(5, 233, 5);
 }
 .orange{
     border-radius: 50%;
-    color: orangered;
+    
 }
 .edit{
     border-radius: 50%;
-    color: rgb(5, 233, 5);
 }
 #width{
     width: 28rem;
@@ -81,6 +79,9 @@ p{
 .h3-story{
     text-align: center;
     margin-top: 3rem;
+}
+.input-field label{
+    font-size: 1.5rem;
 }
 
 

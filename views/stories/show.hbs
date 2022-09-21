@@ -13,12 +13,13 @@
         </div>
     </div>
     <div class="col s12 m8" >
-        <h3 class="h3-story">{{story.medicine}}
+        <h4 class="h3-story">{{story.medicine}}
             <small>{{{editIcon story.user user story._id false}}}</small>
-        </h3>
+        </h4>
         <div class="card story" >
             <div class="card-content">
-                <span class="card-title grey-text">{{formatDate date 'MMMM Do YYYY'}}</span>
+                <span class="card-title grey-text">{{formatDate date 'MMMM Do YYYY'}}</span> 
+                <div class="divider"></div>
                 {{{story.body}}}
             </div>
         </div>
