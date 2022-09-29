@@ -7,7 +7,7 @@ const Story = require('../models/Story')
 //@desc Showw add page
 //@Route GET /stories/add
 router.get('/add', ensureAuth, (req,res) => {
-    res.render('stories/add')
+  res.render('stories/add')
 })
 
 //@desc Process add form

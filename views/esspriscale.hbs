@@ -1,0 +1,27 @@
+
+<h4>Welcome {{name}}! I hope you feel well today!</h4> 
+{{#if esspries}}
+       <table class="highlight">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Dryness</th>
+                <th>Fatigue</th>
+                <th>Pain</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each esspries}}
+                <tr>
+                    <td>{{formatDate createdAt 'MMMM Do YYYY'}}</td>
+                    <td>{{dryness}}</td>
+                    <td>{{fatigue}}</td>
+                    <td>{{pain}}</td>
+                    
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+{{else}}
+    <p>You have not any data associated with ESSPRI!</p>
+{{/if}}

@@ -1,0 +1,20 @@
+<form action="/esspriscale" method="POST">
+   <label for="dryness">Dryness Status (100-mm VAS):</label>
+    <p class="range-field">
+      <input type="range" id="dryness" name="dryness" min="0" max="100" />
+    </p>
+    <label for="fatigue">Fatigue Status (100-mm VAS):</label>
+    <p class="range-field">
+      <input type="range" id="fatigue" name="fatigue" min="0" max="100" />
+    </p>
+    <label for="pain">Pain Status (100-mm VAS):</label>
+     <p class="range-field">
+      <input type="range" id="pain" name="pain" min="0" max="100" />
+      </p>
+        <div class="row">
+            <input type="submit" value="Submit" class="btn save"> 
+            <a href="/dashboard" class="btn orange">Cancel</a>
+        </div>
+    </form>
+  </form>
+

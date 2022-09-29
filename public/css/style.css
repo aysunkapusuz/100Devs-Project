@@ -66,8 +66,14 @@ p{
     border-radius: 50%;
     
 }
+.btn-green{
+    border-radius: 50%;
+}
 .edit{
     border-radius: 50%;
+}
+.save{
+    font-family: 'Caveat', cursive;  
 }
 #width{
     width: 28rem;
@@ -81,6 +87,9 @@ p{
     margin-top: 3rem;
 }
 .input-field label{
+    font-size: 1.5rem;
+}
+label{
     font-size: 1.5rem;
 }
 

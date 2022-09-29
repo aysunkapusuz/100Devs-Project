@@ -8,9 +8,9 @@
        <table class="highlight">
         <thead>
             <tr>
+                <th>Date</th>
                 <th>Name of Medicine</th>
                 <th>Number of Usage</th>
-                <th>Date</th>
                 <th>Status</th>
                 <th></th>
             </tr>
@@ -18,9 +18,9 @@
         <tbody>
             {{#each stories}}
                 <tr>
+                    <td>{{formatDate createdAt 'MMMM Do YYYY'}}</td>
                     <td><a href="/stories/{{_id}}">{{medicine}}</a></td>
                     <td><a href="/stories/{{_id}}">{{number}}</a></td>
-                    <td>{{formatDate createdAt 'MMMM Do YYYY'}}</td>
                     <td><span class="dash-status">{{status}}</span></td>
                     <td>
                         <a href="/stories/edit/{{_id}}" class="btn btn-green btn-float">
