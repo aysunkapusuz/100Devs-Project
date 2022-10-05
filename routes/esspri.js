@@ -15,6 +15,15 @@ router.post('/esspriscale', ensureAuth, async (req,res) => {
       res.render('error/500')
   }
 })
+router.delete('/:id', ensureAuth, async (req,res) => {
+  try {
+      await Esspri.remove({ _id: req.params.id })
+      res.redirect('/esspriscale')
+  } catch (err) {
+      console.error(err)
+      return res.render('error/500')
+  }
+})
 
 
 

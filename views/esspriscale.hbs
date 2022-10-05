@@ -1,7 +1,7 @@
 
 <h4>Welcome {{name}}! I hope you feel well today!</h4> 
 {{#if esspries}}
-       <table class="highlight">
+       <table class="highlight responsive-table">
         <thead>
             <tr>
                 <th>Date</th>
@@ -17,6 +17,14 @@
                     <td>{{dryness}}</td>
                     <td>{{fatigue}}</td>
                     <td>{{pain}}</td>
+                    <td>
+                    <form action="/esspri/{{_id}}" method="POST" id="delete-form">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit" class="btn red  btn-float">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                    </form>
+                    </td>
                     
                 </tr>
             {{/each}}
