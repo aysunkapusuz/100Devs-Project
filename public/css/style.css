@@ -92,7 +92,9 @@ p{
 label{
     font-size: 1.5rem;
 }
-
+#chewgum-p{
+    color: black;
+}
 
 
 
@@ -142,6 +144,10 @@ z-index: 1;
 background: #00b84c;
 z-index: 1;
 }
+.waves{
+    z-index: 1;
+}
+
 
 .timer__btn--stop {
 background: #ff0256;
@@ -280,6 +286,8 @@ animation-duration: 11s;
 }
 
 
+
+
 /* drink water routes */
 
 
@@ -288,7 +296,9 @@ animation-duration: 11s;
     height: 350px;
     border: 10px solid #0d161f;
     margin-top: 200px;
-    float: right;
+    position: relative;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%,-50%);
     border-radius: 0px 0px 50px 50px;
     box-shadow: 0px 0px 0px 8px #fff,
@@ -314,6 +324,14 @@ animation-duration: 11s;
   }
   
   
+  
+  @keyframes filling {
+    50% {background-position: 3000px 0px;}
+    100% {background-position: 6000px 350px;}
+  }
+  .main{
+    box-sizing: border-box;
+  }
   h2 {
     color: rgba(149, 248, 131, 0.656);
     position: absolute;
@@ -324,26 +342,3 @@ animation-duration: 11s;
   }
   
   
-  @keyframes filling {
-    50% {background-position: 3000px 0px;}
-    100% {background-position: 6000px 350px;}
-  }
-  .main{
-    box-sizing: border-box;
-  }
-  
-  h1 {
-      color: rgb(64, 83, 5);
-      text-align: center;
-      }
-  div.gfg {
-      background-color: rgb(233, 245, 221);
-      width: 500px;
-      height: 250px;
-      overflow: auto;
-      text-align:justify;
-      float: left;
-      margin-top: 120px;
-      margin-left: 100px;
-      padding: 20px;
-  }

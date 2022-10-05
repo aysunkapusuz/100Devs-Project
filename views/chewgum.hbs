@@ -1,6 +1,32 @@
 
-<h3>Relax and Chew Gum</h3> <br>
-<p>Set the timer at least for 10 minutes and start chewing gum. This is important for you do it by relaxing every day.</p>
+<h3>Relax and Chew Gum</h3>
+
+
+<p class="center" id="chewgum-p"> Set the timer at least for 10 minutes and start chewing gum. This is important for you do it every day by relaxing.</p>
+
+<div class="container center">
+            <!-- Modal Trigger -->
+            <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Read It</a>
+
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal card-panel light-green lighten-5">
+                <div class="modal-content">
+                    <p>Use artificial saliva substitutes (mouthwash or spray), which coat the mouth. <br>
+                      Avoid medicines that are known to cause dry mouth, such as antihistamines, diuretics, and some antidepressants. Talk with your doctor if you take any of these medicines. Sometimes the benefits of a medicine outweigh the risks. 
+                      Brush your teeth twice a day and after meals with fluoride toothpaste, and floss your teeth every day. <br>
+                      Make frequent visits to the dentist to prevent and treat tooth decay. <br>
+                      Use antifungal medicines to treat thrush, a yeast infection that develops in the mouth. <br>
+                      Use sugar-free gum or candies such as lemon drops that naturally stimulate saliva production. (Sugar can increase your risk for cavities and yeast infections.) <br>
+                      Sjögren's syndrome causes dry mouth, which in turn can make it hard to swallow pills. In some cases, your pharmacist can crush the pills and put each dose in a capsule. Then you can mix the contents of the capsule with a teaspoonful of jam, jelly, or gelatin for easier swallowing. Be sure to take all the food in order to get the full dose of medicine. </p>
+                </div>
+                <div class="modal-footer modal card-panel teal lighten-2">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close the tab</a>
+                </div>
+            </div>
+        </div>
+</div>
+
+
 
 <div class="timer"></div>
 
@@ -17,10 +43,19 @@
                     <li></li>
                     <li></li>
             </ul>
-</div>
+            </div>
 
 
-<script>
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/js/materialize.min.js"></script>
+
+<script >
+  
+        var elem = document.querySelector('.modal');
+        var options = {};
+        var instance = new M.Modal(elem, options);
+         var slider = document.getElementById('test-slider');
+
+         
     class Timer {
   constructor(root) {
     root.innerHTML = Timer.getHTML();
