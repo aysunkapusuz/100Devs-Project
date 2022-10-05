@@ -5,7 +5,7 @@
 <h5>Your medicine usage history is below.</h5> <br>
 
 {{#if stories}}
-       <table class="highlight">
+       <table class="highlight responsive-table">
         <thead>
             <tr>
                 <th>Date</th>
@@ -19,17 +19,17 @@
             {{#each stories}}
                 <tr>
                     <td>{{formatDate createdAt 'MMMM Do YYYY'}}</td>
-                    <td><a href="/stories/{{_id}}">{{medicine}}</a></td>
-                    <td><a href="/stories/{{_id}}">{{number}}</a></td>
+                    <td><a href="/medicalhistories/{{_id}}">{{medicine}}</a></td>
+                    <td>{{number}}</td>
                     <td><span class="dash-status">{{status}}</span></td>
                     <td>
-                        <a href="/stories/edit/{{_id}}" class="btn btn-green btn-float">
+                        <a href="/medicalhistories/edit/{{_id}}" class="btn btn-green btn-float">
                             <i class="fas fa-edit"></i>
                         </a>
 
-                        <form action="/stories/{{_id}}" method="POST" id="delete-form">
+                        <form action="/medicalhistories/{{_id}}" method="POST" id="delete-form">
                             <input type="hidden" name="_method" value="DELETE">
-                            <button type="submit" class="btn red">
+                            <button type="submit" class="btn red  btn-float">
                                 <i class="fas fa-trash"></i>
                             </button>
                         </form>

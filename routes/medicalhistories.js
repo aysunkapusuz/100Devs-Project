@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const { ensureAuth} = require('../middleware/auth')
 
-const Story = require('../models/Story')
+const History = require('../models/History')
 
 //@desc Showw add page
 //@Route GET /stories/add
@@ -15,7 +15,7 @@ router.get('/add', ensureAuth, (req,res) => {
 router.post('/', ensureAuth, async (req,res) => {
     try {
         req.body.user = req.user.id
-        await Story.create(req.body)
+        await History.create(req.body)
         res.redirect('/dashboard')
     } catch (err) {
         console.error(err)
@@ -27,7 +27,7 @@ router.post('/', ensureAuth, async (req,res) => {
 //@Route GET /stories
 router.get('/', ensureAuth, async (req,res) => {
   try {
-    const stories = await Story.find({status: 'shared'})
+    const stories = await History.find({status: 'shared'})
           .populate('user')
           .sort({createdAt: 'desc'})
           .lean()
@@ -45,7 +45,7 @@ router.get('/', ensureAuth, async (req,res) => {
 //@Route GET /stories/:id
 router.get('/:id', ensureAuth, async (req,res) => {
     try {
-        let story = await Story.findById(req.params.id)
+        let story = await History.findById(req.params.id)
             .populate('user')
             .lean()
         
@@ -66,7 +66,7 @@ router.get('/:id', ensureAuth, async (req,res) => {
 //@Route GET /stories/edit/:id
 router.get('/edit/:id', ensureAuth, async (req, res) => {
     try {
-      const story = await Story.findOne({
+      const story = await History.findOne({
         _id: req.params.id,
       }).lean()
   
@@ -91,7 +91,7 @@ router.get('/edit/:id', ensureAuth, async (req, res) => {
 //@Route PUT /stories/:id
 router.put('/:id', ensureAuth, async (req,res) => {
     try{
-        let story = await Story.findById(req.params.id).lean()
+        let story = await History.findById(req.params.id).lean()
 
         if(!story) {
             return res.render('error/404')
@@ -100,7 +100,7 @@ router.put('/:id', ensureAuth, async (req,res) => {
         if(story.user != req.user.id) {
             res.redirect('/stories')
         } else {
-        story = await Story.findOneAndUpdate({_id: req.params.id }, req.body, {
+        story = await History.findOneAndUpdate({_id: req.params.id }, req.body, {
             new: true,
             runValidators: true,
         })
@@ -117,7 +117,7 @@ router.put('/:id', ensureAuth, async (req,res) => {
 //@Route DELETE /stories/:id
 router.delete('/:id', ensureAuth, async (req,res) => {
     try {
-        await Story.remove({ _id: req.params.id })
+        await History.remove({ _id: req.params.id })
         res.redirect('/dashboard')
     } catch (err) {
         console.error(err)
@@ -129,7 +129,7 @@ router.delete('/:id', ensureAuth, async (req,res) => {
 // @route   GET /stories/user/:userId
 router.get('/user/:userId', ensureAuth, async (req, res) => {
     try {
-      const stories = await Story.find({
+      const stories = await History.find({
         user: req.params.userId,
         status: 'shared',
       })

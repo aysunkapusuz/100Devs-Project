@@ -3,7 +3,7 @@ const router = express.Router()
 const {ensureAuth, ensureGuest} = require('../middleware/auth')
 
 
-const Story = require('../models/Story')
+const History = require('../models/History')
 const Esspri = require('../models/Esspri')
 
 
@@ -20,7 +20,7 @@ router.get('/', ensureGuest, (req,res)=>{
 // @route GET /dashboard
 router.get('/dashboard', ensureAuth, async (req,res) => {
     try {
-        const stories = await Story.find({user: req.user.id}).lean()
+        const stories = await History.find({user: req.user.id}).lean()
         // console.log(req.user.id)
         // console.log(stories)
         res.render('dashboard', {

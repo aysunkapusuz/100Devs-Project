@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const StorySchema = new mongoose.Schema({
+const HistorySchema = new mongoose.Schema({
     medicine: {
       type: String,
       required: true,
@@ -13,7 +13,7 @@ const StorySchema = new mongoose.Schema({
     },
     body: {
       type: String,
-      required: true,
+      required: false,
     },
     status: {
       type: String,
@@ -32,4 +32,4 @@ const StorySchema = new mongoose.Schema({
     },
   })
 
-module.exports = mongoose.model('Story', StorySchema)
+module.exports = mongoose.model('History', HistorySchema)

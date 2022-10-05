@@ -20,11 +20,7 @@ p{
     color: rgba(180, 255, 59, 0.97); 
 }
 
-.login-container{
-    width: 400px;
-    margin-top: 100px;
-    text-align: center;
-}
+
 
 .fa-small {
     font-size: 16px !important;
@@ -51,14 +47,18 @@ p{
     background-color: rgba(180, 255, 59, 0.97);
 }
 .btn-float{
-    color: rgb(5, 233, 5);
-    border-radius: 50%;
-}
-.red{
-    color: rgb(252, 136, 136);
     border-radius: 50%;
     flex: auto;
+    color: rgb(245, 245, 245);
 }
+.red{
+    border-radius: 50%;
+    flex: auto;
+    color: rgb(245, 245, 245);
+    
+    
+}
+
 .save{
     border-radius: 50%;
 }
@@ -92,7 +92,6 @@ p{
 label{
     font-size: 1.5rem;
 }
-
 
 
 
