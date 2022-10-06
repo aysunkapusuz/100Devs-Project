@@ -335,8 +335,8 @@ animation-duration: 11s;
   h2 {
     color: rgba(149, 248, 131, 0.656);
     position: absolute;
-    font-family: fantasy;
-    font-size: 40px;
+    font-family: 'Caveat', cursive;
+    font-size: 32px;
     text-align: center;
     bottom: 1px;
   }
