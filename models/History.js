@@ -17,8 +17,8 @@ const HistorySchema = new mongoose.Schema({
     },
     status: {
       type: String,
-      default: 'unshared',
-      enum: ['unshared', 'shared'],
+      default: 'private',
+      enum: ['private', 'public'],
     },
     user: {
       type: mongoose.Schema.Types.ObjectId,

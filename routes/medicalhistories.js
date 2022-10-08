@@ -27,7 +27,7 @@ router.post('/', ensureAuth, async (req,res) => {
 //@Route GET /stories
 router.get('/', ensureAuth, async (req,res) => {
   try {
-    const stories = await History.find({status: 'shared'})
+    const stories = await History.find({status: 'public'})
           .populate('user')
           .sort({createdAt: 'desc'})
           .lean()
@@ -131,7 +131,7 @@ router.get('/user/:userId', ensureAuth, async (req, res) => {
     try {
       const stories = await History.find({
         user: req.params.userId,
-        status: 'shared',
+        status: 'public',
       })
         .populate('user')
         .lean()
