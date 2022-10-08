@@ -11,7 +11,7 @@
         <div class="row">
             <div class="input-field">
                 <input type="text" id="number" name="number" value="{{story.number}}">
-                <label for="number">How many did you use today?</label>
+                <label for="number">How many did you take?</label>
             </div>
         </div>
 
@@ -19,8 +19,8 @@
             <div class="input-field">
                 <select id="status" name="status">
                     {{#select story.status}}
-                    <option value="shared" selected>Shared</option>
-                    <option value="unshared">Unshared</option>
+                    <option value="shared">Share</option>
+                    <option value="unshared"  selected>Do not share</option>
                     {{/select}}
                 </select>
                 <label for="status">Status</label>
@@ -29,7 +29,7 @@
 
         <div class="row">
             <div class="input-field">
-                <h5 class="grey-text">Tell Us How You Feel Today:</h5>
+                <h5 class="grey-text">Would you like to share more details? (Tell us how Sjogren’s syndrome is affecting you, symptoms, effects on anxiety or depression, or how you are managing living with Sjogren’s. Please do not recommend any medication.)</h5>
 
                 <textarea id="body" name="body">{{story.body}}</textarea>
             </div>
